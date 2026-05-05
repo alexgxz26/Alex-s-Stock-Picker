@@ -37,26 +37,33 @@ def _period_return(closes: pd.Series, trading_days: int) -> float | None:
 
 def get_technical_snapshot(ticker_symbol: str) -> dict[str, Any]:
     """Pull one year of price history and calculate simple trend metrics."""
-    history = yf.download(
-        ticker_symbol,
-        period="1y",
-        interval="1d",
-        progress=False,
-        auto_adjust=True,
-    )
+    empty_snapshot = {
+        "ticker": ticker_symbol.upper(),
+        "latest_close": None,
+        "ma_50": None,
+        "ma_200": None,
+        "above_50_ma": False,
+        "above_200_ma": False,
+        "return_1m": None,
+        "return_3m": None,
+        "return_6m": None,
+        "return_1y": None,
+    }
+
+    try:
+        history = yf.download(
+            ticker_symbol,
+            period="1y",
+            interval="1d",
+            progress=False,
+            auto_adjust=True,
+        )
+    except Exception:
+        return empty_snapshot
 
     if history.empty or "Close" not in history:
         return {
-            "ticker": ticker_symbol.upper(),
-            "latest_close": None,
-            "ma_50": None,
-            "ma_200": None,
-            "above_50_ma": False,
-            "above_200_ma": False,
-            "return_1m": None,
-            "return_3m": None,
-            "return_6m": None,
-            "return_1y": None,
+            **empty_snapshot,
         }
 
     closes = _close_series(history)
