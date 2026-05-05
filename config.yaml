@@ -12,6 +12,9 @@ portfolio:
   portfolio_file: data/portfolio.csv
   watchlist_file: data/watchlist.csv
 
+ticker_aliases:
+  FISV: FI
+
 risk_limits:
   max_core_position: 0.10
   max_growth_position: 0.06
@@ -68,70 +71,23 @@ budget_data_sources:
   prices_and_technicals:
     primary: yfinance
     fallback: stooq_or_yahoo_csv
-    fields:
-      - last_price
-      - daily_volume
-      - market_cap
-      - beta
-      - fifty_day_ma
-      - two_hundred_day_ma
-      - one_month_return
-      - three_month_return
-      - six_month_return
-      - one_year_return
   fundamentals:
     primary: yfinance
     secondary: sec_companyfacts_xbrl
-    fields:
-      - revenue
-      - gross_profit
-      - operating_income
-      - net_income
-      - operating_cash_flow
-      - capex
-      - free_cash_flow
-      - cash_and_equivalents
-      - total_debt
-      - shares_outstanding
-      - gross_margin
-      - operating_margin
-      - fcf_margin
   sec_filings:
     primary: sec_edgar_apis
-    fields:
-      - latest_10k
-      - latest_10q
-      - latest_8k
-      - latest_s3_or_shelf
-      - form_4_insider_transactions
-      - companyfacts_xbrl
   insider_activity:
     primary: sec_form_4
-    scoring_rules:
-      open_market_buy: positive
-      cluster_buying: strongly_positive
-      routine_10b5_1_sale: neutral_to_slightly_negative
-      non_routine_large_sale: negative
   institutional_activity:
     primary: sec_13f_public_filings
-    note: Budget version can detect broad institutional changes but will be delayed and less clean than paid providers.
   short_interest:
     primary: finra_public_short_interest
-    note: Useful for high-beta and crowded-short risk checks.
   news_and_catalysts:
     primary: company_press_releases_and_sec_8k
     secondary: web_search_when_running_interactively
-    fields:
-      - earnings_date
-      - guidance_update
-      - investor_day
-      - product_launch
-      - regulatory_update
-      - management_change
   earnings_momentum:
     primary: yfinance_earnings_calendar_if_available
     secondary: manual_or_web_validated_inputs
-    note: Budget version has limited analyst revision quality; upgrade later if needed.
 
 portfolio_actions:
   allowed_actions:
@@ -172,23 +128,23 @@ reporting:
     enabled: true
     output: reports/daily_dashboard.md
     sections:
-      - action_needed_today
-      - portfolio_risk
-      - top_add_candidates
-      - trim_or_exit_candidates
-      - upcoming_catalysts
-      - technical_alerts
+      - portfolio_summary
+      - core_etf_allocation
+      - us_stock_holdings
+      - speculative_exposure
+      - cleanup_candidates
+      - data_issues_to_fix
   weekly_report:
     enabled: true
     output: reports/weekly_report.md
     day: Monday
     sections:
-      - ranked_top_ideas
-      - portfolio_actions
-      - new_watchlist_candidates
+      - portfolio_summary
+      - core_etf_allocation
+      - us_stock_holdings
+      - speculative_exposure
       - cleanup_candidates
-      - catalysts_next_30_days
-      - thesis_changes
+      - data_issues_to_fix
   deep_dive_memos:
     enabled: true
     output_folder: reports/deep_dives
