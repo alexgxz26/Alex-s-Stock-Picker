@@ -1,0 +1,47 @@
+source_image,broker,currency,ticker,name,exchange,shares,last_price,market_value,unrealized_pnl,avg_cost_estimated,notes
+IMG_5606,moomoo,USD,CRCL,Circle,,78,116.30,9071.40,-251.94,119.5300,
+IMG_5606,moomoo,USD,NVO,Novo Nordisk,,94,44.82,4213.08,40.42,44.3900,
+IMG_5606,moomoo,USD,MSFT,Microsoft,,5,410.11,2050.55,-17.55,413.6200,
+IMG_5606,moomoo,USD,RZLV,Rezolve AI,,800,2.495,1996.00,-84.00,2.6000,
+IMG_5606,moomoo,USD,MSTR,Strategy,,10,185.605,1856.05,18.05,183.8000,
+IMG_5606,moomoo,USD,RR,Richtech Robotics,,500,2.39,1195.00,-30.00,2.4500,
+IMG_5606,moomoo,USD,HIMS,Hims & Hers,,41,26.28,1077.48,-40.59,27.2700,
+IMG_5606,moomoo,USD,PEW,GrabAGun Digital?,,130,2.97,386.11,0.01,2.9700,Company name truncated in screenshot
+IMG_5606,moomoo,USD,BURU,Nuburu,,1202,0.2822,339.20,-26.20,0.3040,
+IMG_5606,moomoo,USD,CYN,Cyngn,,200,1.68,336.00,-14.00,1.7500,
+IMG_5606,moomoo,USD,YYAI,AiRWA,,200,0.6677,133.54,-7.48,0.7051,
+IMG_5606,moomoo,USD,BNBX,BNB Plus,,91,0.475,43.22,-2.16,0.4987,
+IMG_5607,broker_2,USD,UNH,UnitedHealth,,26,366.52,9529.65,1290.52,316.8838,
+IMG_5607,broker_2,USD,FISV,Fiserv,,75,57.57,4318.05,-996.82,70.8649,Verify ticker: screenshot shows FISV, may map to FI after ticker change
+IMG_5607,broker_2,USD,CGC,Canopy Growth,,1740.903,1.11,1941.11,-356.00,1.3145,
+IMG_5607,broker_2,USD,OPEN,Opendoor,,364,5.09,1853.12,-854.18,7.4373,
+IMG_5607,broker_2,USD,SNAP,Snap,,262,6.18,1618.37,-396.33,7.6920,
+IMG_5607,broker_2,USD,RKT,Rocket Companies,,100,14.21,1420.50,-183.12,16.0362,
+IMG_5607,broker_2,USD,MBLY,Mobileye,,130.157,8.72,1135.63,-1255.18,18.3631,
+IMG_5607,broker_2,USD,GOOGL,Alphabet,,2,389.12,778.24,372.40,202.9200,
+IMG_5607,broker_2,USD,MU,Micron,,0.8011,636.74,510.16,441.89,85.2191,
+IMG_5607,broker_2,USD,IONQ,IonQ,,8.4602,45.93,388.55,39.83,41.2210,
+IMG_5608,IBKR,USD,WGRX,,NASDAQ.SCM,30000,0.1037,3111.00,11.48,,Market value computed as shares * last
+IMG_5608,IBKR,HKD,1009,,SEHK,20000,1.07,21400.00,0.00,,Market value computed as shares * last; currency shown as C1.07 in screenshot
+IMG_5608,IBKR,USD,NXXT,,NASDAQ.SCM,5000,0.3400,1700.00,-53.58,,Market value computed as shares * last
+IMG_5608,IBKR,SGD,Z59,,SGX,4000,0.079,316.00,-8.00,,Market value computed as shares * last
+IMG_5608,IBKR,USD,TOVX,,AMEX,4000,0.3702,1480.80,-48.22,,Market value computed as shares * last
+IMG_5608,IBKR,USD,KULR,,AMEX,550,2.74,1507.00,-55.43,,Market value computed as shares * last
+IMG_5608,IBKR,USD,BYND,Beyond Meat,NASDAQ.NMS,490,0.9273,454.38,-7.56,,Market value computed as shares * last
+IMG_5609,IBKR,USD,DVLT,,NASDAQ.SCM,430,0.5700,245.10,5.51,,Market value computed as shares * last
+IMG_5609,IBKR,USD,UAMY,,NYSE,180,11.31,2035.80,-102.19,,Market value computed as shares * last
+IMG_5609,IBKR,USD,POET,,NASDAQ.SCM,180,9.13,1643.40,463.86,,Market value computed as shares * last
+IMG_5609,IBKR,USD,SOFI,SoFi,NASDAQ.NMS,150,16.12,2418.00,-15.31,,Market value computed as shares * last
+IMG_5609,IBKR,USD,VWRA,Vanguard FTSE All-World UCITS ETF,LSEETF,130,182.44,23717.20,-16.58,,Market value computed as shares * last
+IMG_5609,IBKR,SGD,D05,DBS Group,SGX,100,58.55,5855.00,-5.00,,Market value computed as shares * last
+IMG_5609,IBKR,USD,NVO,Novo Nordisk,NYSE,50,44.77,2238.50,24.24,,Market value computed as shares * last
+IMG_5609,IBKR,USD,VIVK,,NASDAQ.SCM,42,1.89,79.38,2.14,,Market value computed as shares * last
+IMG_5609,IBKR,USD,FLY,,NASDAQ.NMS,42,32.15,1350.30,-66.17,,Market value computed as shares * last
+IMG_5609,IBKR,USD,BKYI,,NASDAQ.SCM,30,5.18,155.40,-0.38,,Market value computed as shares * last
+IMG_5609,IBKR,USD,ASTS,AST SpaceMobile,NASDAQ.NMS,25,65.84,1646.00,-83.23,,Market value computed as shares * last
+IMG_5609,IBKR,USD,NFLX,Netflix,NASDAQ.NMS,20,89.03,1780.60,-50.52,,Market value computed as shares * last; verify if ticker/price split-adjusted or another instrument
+IMG_5609,IBKR,USD,BBAI,BigBear.ai,NYSE,20,4.01,80.20,-4.27,,Market value computed as shares * last
+IMG_5609,IBKR,USD,CRWV,CoreWeave,NASDAQ.NMS,15,126.84,1902.60,25.64,,Market value computed as shares * last
+IMG_5609,IBKR,USD,SAIA,Saia,NASDAQ.NMS,6,417.42,2504.52,99.81,,Market value computed as shares * last
+IMG_5609,IBKR,USD,RDDT,Reddit,NYSE,5,171.65,858.25,15.60,,Market value computed as shares * last
+IMG_5609,IBKR,USD,AMZN,Amazon,NASDAQ.NMS,5,277.11,1385.55,31.96,,Market value computed as shares * last

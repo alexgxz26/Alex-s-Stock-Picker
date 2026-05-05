@@ -1,0 +1,195 @@
+# Budget-version stock picker configuration
+# Market: US-listed stocks
+# Horizon: 6 months to 3 years
+# Style: medium-aggressive, quality growth at reasonable valuation, controlled downside
+
+portfolio:
+  cash_available: 1000
+  monthly_contribution: 1000
+  target_cash_weight: 0.10
+  max_portfolio_drawdown_tolerance: 0.30
+  base_currency: USD
+  portfolio_file: data/portfolio.csv
+  watchlist_file: data/watchlist.csv
+
+risk_limits:
+  max_core_position: 0.10
+  max_growth_position: 0.06
+  max_swing_position: 0.04
+  max_speculative_position: 0.015
+  max_total_speculative_exposure: 0.10
+  max_single_sector_exposure: 0.30
+  min_market_cap_for_core: 50000000000
+  avoid_negative_fcf_core: true
+  avoid_biotech_binary: true
+
+role_definitions:
+  core:
+    description: High-quality durable compounder; positive free cash flow preferred; market cap normally above minimum core threshold.
+    max_position: 0.10
+    default_action_bias: accumulate_on_pullbacks
+  growth:
+    description: Quality growth with more volatility or valuation risk; business should still have credible cash-flow path.
+    max_position: 0.06
+    default_action_bias: staged_buy_or_hold
+  swing:
+    description: 6-24 month catalyst-driven trade; requires technical setup, catalyst, and invalidation level.
+    max_position: 0.04
+    default_action_bias: trade_with_rules
+  speculative:
+    description: High-risk/high-upside position; may be unprofitable, small-cap, or event-driven.
+    max_position: 0.015
+    default_action_bias: small_only_or_avoid
+  cleanup:
+    description: Existing position that does not fit mandate or lacks fresh-buy thesis.
+    max_position: 0.00
+    default_action_bias: trim_or_exit
+
+scoring_model:
+  total_points: 100
+  categories:
+    business_quality: 20
+    growth_durability: 15
+    financial_strength_cash_flow: 15
+    valuation_attractiveness: 15
+    catalyst_strength: 10
+    earnings_momentum: 10
+    insider_institutional_signals: 5
+    technical_setup: 5
+    risk_reward: 5
+  interpretation:
+    high_conviction_buy: [85, 100]
+    buy_or_strong_watch: [75, 84]
+    watchlist_only: [65, 74]
+    weak_opportunity: [50, 64]
+    avoid: [0, 49]
+
+budget_data_sources:
+  prices_and_technicals:
+    primary: yfinance
+    fallback: stooq_or_yahoo_csv
+    fields:
+      - last_price
+      - daily_volume
+      - market_cap
+      - beta
+      - fifty_day_ma
+      - two_hundred_day_ma
+      - one_month_return
+      - three_month_return
+      - six_month_return
+      - one_year_return
+  fundamentals:
+    primary: yfinance
+    secondary: sec_companyfacts_xbrl
+    fields:
+      - revenue
+      - gross_profit
+      - operating_income
+      - net_income
+      - operating_cash_flow
+      - capex
+      - free_cash_flow
+      - cash_and_equivalents
+      - total_debt
+      - shares_outstanding
+      - gross_margin
+      - operating_margin
+      - fcf_margin
+  sec_filings:
+    primary: sec_edgar_apis
+    fields:
+      - latest_10k
+      - latest_10q
+      - latest_8k
+      - latest_s3_or_shelf
+      - form_4_insider_transactions
+      - companyfacts_xbrl
+  insider_activity:
+    primary: sec_form_4
+    scoring_rules:
+      open_market_buy: positive
+      cluster_buying: strongly_positive
+      routine_10b5_1_sale: neutral_to_slightly_negative
+      non_routine_large_sale: negative
+  institutional_activity:
+    primary: sec_13f_public_filings
+    note: Budget version can detect broad institutional changes but will be delayed and less clean than paid providers.
+  short_interest:
+    primary: finra_public_short_interest
+    note: Useful for high-beta and crowded-short risk checks.
+  news_and_catalysts:
+    primary: company_press_releases_and_sec_8k
+    secondary: web_search_when_running_interactively
+    fields:
+      - earnings_date
+      - guidance_update
+      - investor_day
+      - product_launch
+      - regulatory_update
+      - management_change
+  earnings_momentum:
+    primary: yfinance_earnings_calendar_if_available
+    secondary: manual_or_web_validated_inputs
+    note: Budget version has limited analyst revision quality; upgrade later if needed.
+
+portfolio_actions:
+  allowed_actions:
+    - buy_now
+    - add_on_pullback
+    - hold
+    - trim
+    - exit
+    - move_to_watchlist
+    - avoid
+  action_rules:
+    buy_now:
+      requires:
+        - score_gte_75
+        - within_position_limit
+        - valuation_not_extreme
+        - no_major_negative_filing_signal
+    add_on_pullback:
+      requires:
+        - score_gte_75
+        - price_extended_or_near_resistance
+    trim:
+      triggers:
+        - above_role_max_weight
+        - thesis_deteriorating
+        - valuation_extreme
+        - speculative_exposure_above_limit
+    exit:
+      triggers:
+        - thesis_invalidated
+        - negative_fcf_and_no_clear_path
+        - excessive_dilution
+        - binary_or_hype_only_story
+        - does_not_fit_mandate
+
+reporting:
+  daily_dashboard:
+    enabled: true
+    output: reports/daily_dashboard.md
+    sections:
+      - action_needed_today
+      - portfolio_risk
+      - top_add_candidates
+      - trim_or_exit_candidates
+      - upcoming_catalysts
+      - technical_alerts
+  weekly_report:
+    enabled: true
+    output: reports/weekly_report.md
+    day: Monday
+    sections:
+      - ranked_top_ideas
+      - portfolio_actions
+      - new_watchlist_candidates
+      - cleanup_candidates
+      - catalysts_next_30_days
+      - thesis_changes
+  deep_dive_memos:
+    enabled: true
+    output_folder: reports/deep_dives
+    trigger: score_gte_75_or_user_request
