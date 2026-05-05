@@ -1,0 +1,71 @@
+app:
+  name: "Alex's Stock Picker"
+  database_path: "cache/alex_stock_picker.db"
+  output_dir: "output"
+  log_dir: "logs"
+
+universe:
+  include_sp500: true
+  include_nasdaq100: true
+  refresh_frequency: "weekly"
+  benchmark_tickers:
+    - SPY
+    - QQQ
+    - IWM
+    - DIA
+  sector_etfs:
+    - XLK
+    - XLF
+    - XLV
+    - XLE
+    - XLI
+    - XLC
+    - XLY
+    - XLP
+    - XLB
+    - XLRE
+    - XLU
+  macro_tickers:
+    - ^VIX
+    - TLT
+    - HYG
+
+market_data:
+  lookback_years: 3
+  refresh_frequency: "daily"
+  incremental_updates: true
+
+sec:
+  user_agent_env: "SEC_USER_AGENT"
+  rate_limit_per_second: 8
+  cache_filings: true
+  filings_cache_dir: "cache/sec_filings"
+  form4_lookback_days: 180
+  recent_8k_lookback_days: 180
+
+institutional:
+  refresh_frequency: "quarterly"
+  tracked_13f_funds:
+    - "Citadel Advisors"
+    - "Point72 Asset Management"
+    - "Bridgewater Associates"
+    - "Tiger Global Management"
+    - "Third Point"
+    - "Berkshire Hathaway"
+    - "Appaloosa"
+    - "Baupost Group"
+    - "Pershing Square Capital Management"
+
+short_interest:
+  refresh_frequency: "daily"
+
+analyst_estimates:
+  refresh_frequency: "daily"
+  revision_windows_days:
+    - 30
+    - 60
+    - 90
+
+earnings_calendar:
+  lookahead_days: 30
+  refresh_frequency: "daily"
