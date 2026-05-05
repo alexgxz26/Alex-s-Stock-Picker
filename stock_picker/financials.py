@@ -30,12 +30,13 @@ FIELDS = {
 
 def _safe_info(ticker: yf.Ticker) -> dict[str, Any]:
     try:
-        return ticker.get_info()
+        info = ticker.get_info()
     except Exception:
         try:
-            return ticker.info
+            info = ticker.info
         except Exception:
             return {}
+    return info if isinstance(info, dict) else {}
 
 
 def get_financial_snapshot(ticker_symbol: str) -> dict[str, Any]:
