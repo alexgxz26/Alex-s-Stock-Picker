@@ -1,84 +1,84 @@
 # Budget Portfolio Research
 
-Generated: 2026-06-02T15:39
+Generated: 2026-06-03T16:00
 
 Data policy: missing public-source fields are marked `data_missing`; affected scores are provisional.
 
 ## Portfolio Summary
 
-1. Total portfolio value: **$228,458.27**
-2. Cash-adjusted investable value: **$227,458.27**
+1. Total portfolio value: **$232,343.44**
+2. Cash-adjusted investable value: **$231,343.44**
 3. Cash: **$1,000.00**
-4. Speculative exposure: **69.7%**
+4. Speculative exposure: **70.6%**
 
 ## Core / ETF Allocation
 
 | Ticker | Asset Type | Company | Value | Weight | Role | Target | Gap | Status | Notes |
 |---|---|---|---:|---:|---|---:|---:|---|---|
-| VWRA | ETF | Vanguard FTSE All-World UCITS ETF | $23,717.20 | 10.4% | Core Index | 100.0% | $203,741.07 | not_scored_etf | current_price |
+| VWRA | ETF | Vanguard FTSE All-World UCITS ETF | $23,717.20 | 10.2% | Core Index | 100.0% | $207,626.24 | not_scored_etf | current_price |
 
 ## US Stock Holdings
 
 | Ticker | Asset Type | Company | Value | Weight | Role | Score | Status | Notes |
 |---|---|---|---:|---:|---|---:|---|---|
-| WGRX | US_STOCK | Wellgistics Health, Inc. | $117,900.00 | 51.6% | Speculative | 8 | mostly_complete | forward_pe |
-| UNH | US_STOCK | UnitedHealth Group Incorporated | $9,765.47 | 4.3% | Swing | 51 | complete | constructive_technical_setup |
-| CRCL | US_STOCK | Circle Internet Group | $7,713.42 | 3.4% | Speculative | 35 | complete | negative_or_zero_free_cash_flow |
-| NVO | US_STOCK | Novo Nordisk A/S | $6,189.84 | 2.7% | Speculative | 74 | complete | negative_or_zero_free_cash_flow |
+| WGRX | US_STOCK | Wellgistics Health, Inc. | $124,800.00 | 53.7% | Speculative | 8 | mostly_complete | forward_pe |
+| UNH | US_STOCK | UnitedHealth Group Incorporated | $10,008.70 | 4.3% | Swing | 51 | complete | constructive_technical_setup |
+| CRCL | US_STOCK | Circle Internet Group | $7,279.74 | 3.1% | Speculative | 35 | complete | negative_or_zero_free_cash_flow |
+| NVO | US_STOCK | Novo Nordisk A/S | $6,080.40 | 2.6% | Speculative | 74 | complete | negative_or_zero_free_cash_flow |
 | FI (alias for FISV) | US_STOCK | FI | $4,318.05 | 1.9% | Unknown | 0 | provisional | current_price, forward_pe, free_cash_flow, gross_margin, ma_200, operating_margin, price_to_sales, profit_margin, return_6m, revenue_growth, total_debt |
-| NXXT | US_STOCK | NextNRG, Inc. | $3,365.50 | 1.5% | Speculative | 31 | mostly_complete | forward_pe |
-| KULR | US_STOCK | KULR Technology Group, Inc. | $2,882.00 | 1.3% | Speculative | 30 | mostly_complete | forward_pe |
-| ASTS | US_STOCK | AST SpaceMobile, Inc. | $2,863.75 | 1.3% | Speculative | 39 | complete | negative_or_zero_free_cash_flow |
-| SAIA | US_STOCK | Saia, Inc. | $2,858.16 | 1.3% | Swing | 52 | complete | constructive_technical_setup |
-| SOFI | US_STOCK | SoFi Technologies, Inc. | $2,686.50 | 1.2% | Growth | 59 | mostly_complete | free_cash_flow |
-| POET | US_STOCK | POET Technologies Inc. | $2,574.00 | 1.1% | Speculative | 54 | complete | small_cap_position |
-| RZLV | US_STOCK | Rezolve AI PLC | $2,296.00 | 1.0% | Speculative | 39 | mostly_complete | forward_pe |
-| MSFT | US_STOCK | Microsoft Corporation | $2,220.67 | 1.0% | Core | 73 | complete | large_profitable_high_quality |
-| OPEN | US_STOCK | Opendoor Technologies Inc. | $2,000.18 | 0.9% | Cleanup | 18 | complete | low_complete_score |
-| YYAI | US_STOCK | AiRWA Inc. | $1,986.00 | 0.9% | Speculative | 42 | mostly_complete | forward_pe |
-| FLY | US_STOCK | Firefly Aerospace Inc. | $1,869.55 | 0.8% | Cleanup | 28 | complete | low_complete_score |
-| CGC | US_STOCK | Canopy Growth Corporation | $1,862.94 | 0.8% | Cleanup | 14 | complete | low_complete_score |
-| CRWV | US_STOCK | CoreWeave, Inc. | $1,859.33 | 0.8% | Speculative | 45 | complete | negative_or_zero_free_cash_flow |
-| UAMY | US_STOCK | United States Antimony Corporation | $1,777.50 | 0.8% | Cleanup | 23 | complete | low_complete_score |
-| NFLX | US_STOCK | Netflix, Inc. | $1,673.80 | 0.7% | Core | 71 | complete | large_profitable_high_quality |
-| RR | US_STOCK | Richtech Robotics Inc. | $1,510.85 | 0.7% | Speculative | 22 | mostly_complete | forward_pe |
-| SNAP | US_STOCK | Snap Inc. | $1,505.19 | 0.7% | Speculative | 49 | complete | negative_profit_margin |
-| MBLY | US_STOCK | Mobileye Global Inc. | $1,434.98 | 0.6% | Speculative | 57 | complete | negative_profit_margin |
-| RKT | US_STOCK | Rocket Companies, Inc. | $1,396.50 | 0.6% | Speculative | 61 | complete | negative_or_zero_free_cash_flow |
-| MSTR | US_STOCK | Strategy Inc | $1,352.40 | 0.6% | Cleanup | 32 | complete | low_complete_score |
-| AMZN | US_STOCK | Amazon.com, Inc. | $1,302.50 | 0.6% | Core | 76 | complete | large_profitable_high_quality |
-| TOVX | US_STOCK | Theriva Biologics, Inc. | $1,134.80 | 0.5% | Speculative | 19 | mostly_complete | revenue_growth |
-| HIMS | US_STOCK | Hims & Hers Health, Inc. | $1,125.45 | 0.5% | Speculative | 46 | complete | negative_profit_margin |
-| RDDT | US_STOCK | Reddit, Inc. | $852.50 | 0.4% | Growth | 80 | complete | strong_revenue_growth |
-| MU | US_STOCK | Micron Technology, Inc. | $834.53 | 0.4% | Core | 88 | complete | large_profitable_high_quality |
-| GOOGL | US_STOCK | Alphabet Inc. | $735.34 | 0.3% | Core | 91 | complete | large_profitable_high_quality |
-| IONQ | US_STOCK | IonQ, Inc. | $589.34 | 0.3% | Speculative | 47 | complete | negative_or_zero_free_cash_flow |
-| BYND | US_STOCK | Beyond Meat, Inc. | $373.48 | 0.2% | Cleanup | 20 | complete | low_complete_score |
-| PEW | US_STOCK | GrabAGun Digital Holdings Inc. | $326.88 | 0.1% | Speculative | 17 | mostly_complete | forward_pe |
-| CYN | US_STOCK | Cyngn Inc. | $286.14 | 0.1% | Cleanup | 19 | complete | low_complete_score |
-| DVLT | US_STOCK | Datavault AI Inc. | $228.46 | 0.1% | Speculative | 30 | mostly_complete | forward_pe |
-| BURU | US_STOCK | Nuburu, Inc. | $212.75 | 0.1% | Speculative | 0 | mostly_complete | forward_pe, revenue_growth |
-| BKYI | US_STOCK | BIO-key International, Inc. | $121.20 | 0.1% | Speculative | 35 | complete | negative_or_zero_free_cash_flow |
-| BBAI | US_STOCK | BigBear.ai Holdings, Inc. | $102.00 | 0.0% | Cleanup | 9 | complete | low_complete_score |
-| VIVK | US_STOCK | Vivakor, Inc. | $54.18 | 0.0% | Speculative | 18 | mostly_complete | forward_pe |
-| BNBX | US_STOCK | BNB Plus Corp. | $42.78 | 0.0% | Speculative | 14 | mostly_complete | forward_pe |
+| NXXT | US_STOCK | NextNRG, Inc. | $2,964.00 | 1.3% | Speculative | 31 | mostly_complete | forward_pe |
+| SAIA | US_STOCK | Saia, Inc. | $2,773.08 | 1.2% | Swing | 52 | complete | constructive_technical_setup |
+| ASTS | US_STOCK | AST SpaceMobile, Inc. | $2,725.50 | 1.2% | Speculative | 39 | complete | negative_or_zero_free_cash_flow |
+| KULR | US_STOCK | KULR Technology Group, Inc. | $2,648.25 | 1.1% | Speculative | 30 | mostly_complete | forward_pe |
+| POET | US_STOCK | POET Technologies Inc. | $2,548.82 | 1.1% | Speculative | 54 | complete | small_cap_position |
+| SOFI | US_STOCK | SoFi Technologies, Inc. | $2,507.25 | 1.1% | Growth | 59 | mostly_complete | free_cash_flow |
+| MSFT | US_STOCK | Microsoft Corporation | $2,135.53 | 0.9% | Core | 75 | complete | large_profitable_high_quality |
+| RZLV | US_STOCK | Rezolve AI PLC | $2,079.92 | 0.9% | Speculative | 39 | mostly_complete | forward_pe |
+| YYAI | US_STOCK | AiRWA Inc. | $1,904.96 | 0.8% | Speculative | 42 | mostly_complete | forward_pe |
+| CGC | US_STOCK | Canopy Growth Corporation | $1,793.13 | 0.8% | Cleanup | 14 | complete | low_complete_score |
+| OPEN | US_STOCK | Opendoor Technologies Inc. | $1,781.78 | 0.8% | Cleanup | 18 | complete | low_complete_score |
+| FLY | US_STOCK | Firefly Aerospace Inc. | $1,719.06 | 0.7% | Cleanup | 28 | complete | low_complete_score |
+| CRWV | US_STOCK | CoreWeave, Inc. | $1,686.90 | 0.7% | Speculative | 47 | complete | negative_or_zero_free_cash_flow |
+| UAMY | US_STOCK | United States Antimony Corporation | $1,667.54 | 0.7% | Cleanup | 23 | complete | low_complete_score |
+| NFLX | US_STOCK | Netflix, Inc. | $1,627.80 | 0.7% | Core | 71 | complete | large_profitable_high_quality |
+| SNAP | US_STOCK | Snap Inc. | $1,471.13 | 0.6% | Speculative | 49 | complete | negative_profit_margin |
+| MBLY | US_STOCK | Mobileye Global Inc. | $1,423.27 | 0.6% | Speculative | 57 | complete | negative_profit_margin |
+| RR | US_STOCK | Richtech Robotics Inc. | $1,365.15 | 0.6% | Speculative | 22 | mostly_complete | forward_pe |
+| RKT | US_STOCK | Rocket Companies, Inc. | $1,329.00 | 0.6% | Speculative | 61 | complete | negative_or_zero_free_cash_flow |
+| MSTR | US_STOCK | Strategy Inc | $1,306.80 | 0.6% | Cleanup | 32 | complete | low_complete_score |
+| AMZN | US_STOCK | Amazon.com, Inc. | $1,250.75 | 0.5% | Core | 73 | complete | large_profitable_high_quality |
+| TOVX | US_STOCK | Theriva Biologics, Inc. | $1,114.00 | 0.5% | Speculative | 23 | mostly_complete | revenue_growth |
+| HIMS | US_STOCK | Hims & Hers Health, Inc. | $1,090.19 | 0.5% | Speculative | 46 | complete | negative_profit_margin |
+| MU | US_STOCK | Micron Technology, Inc. | $847.16 | 0.4% | Core | 88 | complete | large_profitable_high_quality |
+| RDDT | US_STOCK | Reddit, Inc. | $832.60 | 0.4% | Growth | 80 | complete | strong_revenue_growth |
+| GOOGL | US_STOCK | Alphabet Inc. | $719.30 | 0.3% | Core | 91 | complete | large_profitable_high_quality |
+| IONQ | US_STOCK | IonQ, Inc. | $586.97 | 0.3% | Speculative | 47 | complete | negative_or_zero_free_cash_flow |
+| BYND | US_STOCK | Beyond Meat, Inc. | $359.66 | 0.2% | Cleanup | 20 | complete | low_complete_score |
+| PEW | US_STOCK | GrabAGun Digital Holdings Inc. | $338.00 | 0.1% | Speculative | 17 | mostly_complete | forward_pe |
+| CYN | US_STOCK | Cyngn Inc. | $276.42 | 0.1% | Cleanup | 19 | complete | low_complete_score |
+| DVLT | US_STOCK | Datavault AI Inc. | $208.03 | 0.1% | Speculative | 32 | mostly_complete | forward_pe |
+| BURU | US_STOCK | Nuburu, Inc. | $200.49 | 0.1% | Speculative | 0 | mostly_complete | forward_pe, revenue_growth |
+| BKYI | US_STOCK | BIO-key International, Inc. | $124.50 | 0.1% | Speculative | 35 | complete | negative_or_zero_free_cash_flow |
+| BBAI | US_STOCK | BigBear.ai Holdings, Inc. | $96.40 | 0.0% | Cleanup | 9 | complete | low_complete_score |
+| VIVK | US_STOCK | Vivakor, Inc. | $52.50 | 0.0% | Speculative | 18 | mostly_complete | forward_pe |
+| BNBX | US_STOCK | BNB Plus Corp. | $43.74 | 0.0% | Speculative | 14 | mostly_complete | forward_pe |
 
 ### Top Add Candidates
 
 | Ticker | Role | Score | Action | Add Gap | Sizing View | Invalidation |
 |---|---|---:|---|---:|---|---|
-| GOOGL | Core | 91 | add_on_pullback | $22,010.49 | up to 10.0% cash-adjusted role cap; add room $22,010.49 | close below 200-day moving average ($301.40) or thesis/data deterioration |
-| MU | Core | 88 | add_on_pullback | $21,911.30 | up to 10.0% cash-adjusted role cap; add room $21,911.30 | close below 200-day moving average ($347.74) or thesis/data deterioration |
-| RDDT | Growth | 80 | add_on_pullback | $12,795.00 | up to 6.0% cash-adjusted role cap; add room $12,795.00 | close below 200-day moving average ($190.79) or thesis/data deterioration |
-| AMZN | Core | 76 | add_on_pullback | $21,443.33 | up to 10.0% cash-adjusted role cap; add room $21,443.33 | close below 200-day moving average ($231.85) or thesis/data deterioration |
-| MSFT | Core | 73 | hold | $20,525.16 | up to 10.0% cash-adjusted role cap; add room $20,525.16 | close below 200-day moving average ($455.77) or thesis/data deterioration |
+| GOOGL | Core | 91 | add_on_pullback | $22,415.04 | up to 10.0% cash-adjusted role cap; add room $22,415.04 | close below 200-day moving average ($302.15) or thesis/data deterioration |
+| MU | Core | 88 | add_on_pullback | $22,287.18 | up to 10.0% cash-adjusted role cap; add room $22,287.18 | close below 200-day moving average ($352.53) or thesis/data deterioration |
+| RDDT | Growth | 80 | add_on_pullback | $13,048.01 | up to 6.0% cash-adjusted role cap; add room $13,048.01 | close below 200-day moving average ($190.39) or thesis/data deterioration |
+| MSFT | Core | 75 | add_on_pullback | $20,998.82 | up to 10.0% cash-adjusted role cap; add room $20,998.82 | close below 200-day moving average ($455.31) or thesis/data deterioration |
+| AMZN | Core | 73 | hold | $21,883.59 | up to 10.0% cash-adjusted role cap; add room $21,883.59 | close below 200-day moving average ($231.93) or thesis/data deterioration |
 
 ## Speculative Exposure
 
-- Current speculative exposure: **69.7%** ($159,313.20)
-- Limit: **10.0%** ($22,845.83)
+- Current speculative exposure: **70.6%** ($164,065.46)
+- Limit: **10.0%** ($23,234.34)
 - Status: **over_limit**
-- Excess above limit: **$136,467.37**
+- Excess above limit: **$140,831.12**
 
 ## Cleanup Candidates
 
@@ -86,20 +86,20 @@ Data policy: missing public-source fields are marked `data_missing`; affected sc
 
 | Ticker | Asset Type | Company | Value | Weight | Role | Target | Gap | Status | Notes |
 |---|---|---|---:|---:|---|---:|---:|---|---|
-| WGRX | US_STOCK | Wellgistics Health, Inc. | $117,900.00 | 51.6% | Speculative | 1.5% | $-114,488.13 | mostly_complete | forward_pe |
-| CRCL | US_STOCK | Circle Internet Group | $7,713.42 | 3.4% | Speculative | 1.5% | $-4,301.55 | complete | negative_or_zero_free_cash_flow |
-| OPEN | US_STOCK | Opendoor Technologies Inc. | $2,000.18 | 0.9% | Cleanup | 0.0% | $-2,000.18 | complete | low_complete_score |
-| FLY | US_STOCK | Firefly Aerospace Inc. | $1,869.55 | 0.8% | Cleanup | 0.0% | $-1,869.55 | complete | low_complete_score |
-| CGC | US_STOCK | Canopy Growth Corporation | $1,862.94 | 0.8% | Cleanup | 0.0% | $-1,862.94 | complete | low_complete_score |
+| WGRX | US_STOCK | Wellgistics Health, Inc. | $124,800.00 | 53.7% | Speculative | 1.5% | $-121,329.85 | mostly_complete | forward_pe |
+| CRCL | US_STOCK | Circle Internet Group | $7,279.74 | 3.1% | Speculative | 1.5% | $-3,809.59 | complete | negative_or_zero_free_cash_flow |
+| CGC | US_STOCK | Canopy Growth Corporation | $1,793.13 | 0.8% | Cleanup | 0.0% | $-1,793.13 | complete | low_complete_score |
+| OPEN | US_STOCK | Opendoor Technologies Inc. | $1,781.78 | 0.8% | Cleanup | 0.0% | $-1,781.78 | complete | low_complete_score |
+| FLY | US_STOCK | Firefly Aerospace Inc. | $1,719.06 | 0.7% | Cleanup | 0.0% | $-1,719.06 | complete | low_complete_score |
 
 ### Data-Quality Issues
 
 | Ticker | Asset Type | Company | Value | Weight | Role | Target | Gap | Status | Notes |
 |---|---|---|---:|---:|---|---:|---:|---|---|
-| D05 | NON_US_STOCK | DBS Group | $4,578.40 | 2.0% | Non-US | 0.0% | $-4,578.40 | not_scored_non_us | current_price |
+| D05 | NON_US_STOCK | DBS Group | $4,562.99 | 2.0% | Non-US | 0.0% | $-4,562.99 | not_scored_non_us | current_price |
 | FI (alias for FISV) | US_STOCK | FI | $4,318.05 | 1.9% | Unknown | 0.0% | $-4,318.05 | provisional | current_price, forward_pe, free_cash_flow, gross_margin, ma_200, operating_margin, price_to_sales, profit_margin, return_6m, revenue_growth, total_debt |
-| 1009 | NON_US_STOCK | 1009 | $2,730.66 | 1.2% | Non-US | 0.0% | $-2,730.66 | not_scored_non_us | current_price |
-| Z59 | NON_US_STOCK | Z59 | $247.10 | 0.1% | Non-US | 0.0% | $-247.10 | not_scored_non_us | current_price |
+| 1009 | NON_US_STOCK | 1009 | $2,730.50 | 1.2% | Non-US | 0.0% | $-2,730.50 | not_scored_non_us | current_price |
+| Z59 | NON_US_STOCK | Z59 | $246.28 | 0.1% | Non-US | 0.0% | $-246.28 | not_scored_non_us | current_price |
 
 ### Overweight But Quality Holdings
 
@@ -116,8 +116,8 @@ Data policy: missing public-source fields are marked `data_missing`; affected sc
 | D05 | NON_US_STOCK | NON_US_STOCK, current_price | NON_US_STOCK: SEC lookup skipped. |
 | FI (alias for FISV) | US_STOCK | ticker_alias:FISV->FI, current_price, forward_pe, free_cash_flow, gross_margin, ma_200, operating_margin, price_to_sales, profit_margin, return_6m, revenue_growth, total_debt | Ticker was not found in the SEC ticker-to-CIK mapping. |
 | NXXT | US_STOCK | forward_pe | negative_profit_margin |
-| KULR | US_STOCK | forward_pe | negative_or_zero_free_cash_flow |
 | 1009 | NON_US_STOCK | NON_US_STOCK, current_price | NON_US_STOCK: SEC lookup skipped. |
+| KULR | US_STOCK | forward_pe | negative_or_zero_free_cash_flow |
 | SOFI | US_STOCK | free_cash_flow | strong_revenue_growth |
 | RZLV | US_STOCK | forward_pe | negative_profit_margin |
 | YYAI | US_STOCK | forward_pe | negative_profit_margin |
